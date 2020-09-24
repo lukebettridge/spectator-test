@@ -15,4 +15,10 @@ const Button = (props: {
 	);
 };
 
+Button.propTypes = {
+	children: PropTypes.node,
+	disabled: PropTypes.bool,
+	onClick: PropTypes.func
+};
+
 export default Button;

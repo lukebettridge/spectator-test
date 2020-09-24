@@ -6,8 +6,27 @@ export const Author = styled(Subheading)`
 	font-style: italic;
 `;
 
+export const Container = styled.div`
+	@media (min-width: 48em) {
+		margin-bottom: 4.25rem;
+	}
+`;
+
+export const Image = styled.img`
+	height: 18.75rem;
+	margin-top: 4rem;
+	object-fit: cover;
+	width: 100%;
+
+	@media (min-width: 48em) {
+		margin-top: auto;
+	}
+`;
+
 export const Wrapper = styled.div`
 	border-bottom: 0.125rem solid ${(p) => p.theme.colors.border};
+	display: flex;
+	flex-direction: column;
 	padding: 1.875rem 0;
 
 	&:last-child {

@@ -3,17 +3,20 @@ import PropTypes from "prop-types";
 import Button from "../Button";
 import { Heading } from "../Typography";
 
-import { Author, Wrapper } from "./index.styles";
+import { Author, Container, Image, Wrapper } from "./index.styles";
 
 const Article = ({ addBookmark, article, isBookmarked }) => {
-	const { author, title } = article;
+	const { author, title, urlToImage } = article;
 	return (
 		<Wrapper>
-			<Author>{author}</Author>
-			<Heading>{title}</Heading>
-			<Button disabled={isBookmarked} onClick={() => addBookmark(article)}>
-				{isBookmarked ? "Added" : "Add"}
-			</Button>
+			<Container>
+				<Author>{author}</Author>
+				<Heading>{title}</Heading>
+				<Button disabled={isBookmarked} onClick={() => addBookmark(article)}>
+					{isBookmarked ? "Added" : "Add"}
+				</Button>
+			</Container>
+			<Image src={urlToImage} />
 		</Wrapper>
 	);
 };
