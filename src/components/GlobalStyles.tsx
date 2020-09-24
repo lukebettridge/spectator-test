@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
-    *, *:before, *:after { 
+    *, *::before, *::after { 
         box-sizing: inherit;
         margin: 0;
         padding: 0;
