@@ -1,14 +1,14 @@
 import PropTypes from "prop-types";
 
 import Button from "../Button";
-import { Author, Headline } from "../Typography";
+import { Heading } from "../Typography";
 
-import { Wrapper } from "./index.styles";
+import { Author, Wrapper } from "./index.styles";
 
 const Article = ({ author, title }) => (
 	<Wrapper>
 		<Author>{author}</Author>
-		<Headline>{title}</Headline>
+		<Heading>{title}</Heading>
 		<Button>Add</Button>
 	</Wrapper>
 );

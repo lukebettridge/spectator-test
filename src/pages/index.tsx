@@ -1,15 +1,18 @@
 import axios from "axios";
 import { GetServerSideProps } from "next";
 
-import Article from "../components/Article";
+import Articles from "../components/Articles";
+import Bookmarks from "../components/Bookmarks";
+import { Container, Wrapper } from "../components/Layout";
 
 const Home = ({ articles }) => {
 	return (
-		<>
-			{articles.map(({ author, title, urlToImage }, index) => (
-				<Article author={author} title={title} key={index} />
-			))}
-		</>
+		<Wrapper>
+			<Container>
+				<Articles articles={articles} />
+				<Bookmarks />
+			</Container>
+		</Wrapper>
 	);
 };
 
