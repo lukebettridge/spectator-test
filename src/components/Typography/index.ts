@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Heading = styled.h2`
-	color: #262222;
+	color: ${(p) => p.theme.colours.primary.black};
 	font-family: "goudy-old-style", serif;
 	font-size: 3.25em;
 	font-weight: 700;
@@ -10,7 +10,7 @@ export const Heading = styled.h2`
 `;
 
 export const Paragraph = styled.p`
-	color: rgba(38, 34, 34, 0.6);
+	color: ${(p) => p.theme.colours.body};
 	font-family: "system-ui", sans-serif;
 	font-size: 1.75em;
 	font-weight: 400;
@@ -18,7 +18,7 @@ export const Paragraph = styled.p`
 `;
 
 export const Subheading = styled.h3`
-	color: #d30d1d;
+	color: ${(p) => p.theme.colours.primary.red};
 	display: block;
 	font-family: "goudy-old-style", serif;
 	font-size: 2.5em;

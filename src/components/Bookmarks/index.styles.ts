@@ -1,14 +1,14 @@
 import styled from "styled-components";
 
 export const HeadContainer = styled.div`
-	border-bottom: 0.125rem solid #ebebeb;
-	border-top: 0.25rem solid #d30d1d;
+	border-bottom: 0.125rem solid ${(p) => p.theme.colours.border};
+	border-top: 0.25rem solid ${(p) => p.theme.colours.primary.red};
 	padding: 3.25rem 0 2rem;
 	position: relative;
 
 	&::before,
 	&::after {
-		background-color: rgba(211, 13, 29, 0.2);
+		background-color: ${(p) => p.theme.colours.borderRed};
 		content: "";
 		height: 0.125rem;
 		position: absolute;
@@ -28,5 +28,9 @@ export const Wrapper = styled.div`
 		grid-row: unset;
 		margin-bottom: 0;
 		padding-left: 4rem;
+
+		> *:nth-child(n + 3) {
+			font-size: 6px;
+		}
 	}
 `;
