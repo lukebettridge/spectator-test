@@ -1,5 +1,6 @@
 {
 	"compilerOptions": {
+		"baseUrl": "src",
 		"target": "es6",
 		"lib": ["DOM", "DOM.Iterable", "ESNext"],
 		"forceConsistentCasingInFileNames": true,
@@ -12,7 +13,11 @@
 		"skipLibCheck": true,
 		"strict": false,
 		"noEmit": true,
-		"resolveJsonModule": true
+		"resolveJsonModule": true,
+		"paths": {
+			"@components/*": ["components/*"],
+			"@functions/*": ["functions/*"]
+		}
 	},
 	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
 	"exclude": ["node_modules"]

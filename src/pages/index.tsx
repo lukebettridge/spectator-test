@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { GetServerSideProps } from "next";
 
-import { addBookmark, removeBookmark } from "../functions";
+import { addBookmark, isBookmarked, removeBookmark } from "../functions";
 import { Article } from "../common/types";
 import Articles from "../components/Articles";
 import Bookmarks from "../components/Bookmarks";
@@ -17,6 +17,7 @@ const Home = (props: { articles: Article[] }) => {
 				<Articles
 					addBookmark={addBookmark(bookmarks, setBookmarks)}
 					articles={props.articles}
+					isBookmarked={isBookmarked(bookmarks)}
 				/>
 				<Bookmarks
 					bookmarks={bookmarks}

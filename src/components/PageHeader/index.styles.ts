@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-	border-bottom: 0.125rem solid ${(p) => p.theme.colours.border};
+	border-bottom: 0.125rem solid ${(p) => p.theme.colors.border};
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
 	width: 100%;
 
 	svg {
-		fill: #d2091e;
+		fill: ${(p) => p.theme.colors.logo};
 		height: 7rem;
 	}
 `;

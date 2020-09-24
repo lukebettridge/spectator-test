@@ -3,12 +3,16 @@ import PropTypes from "prop-types";
 
 import { StyledButton } from "./index.styles";
 
-const Button = (props: { children: ReactNode; onClick: () => any }) => {
-	return <StyledButton onClick={props.onClick}>{props.children}</StyledButton>;
-};
-
-Button.propTypes = {
-	children: PropTypes.node
+const Button = (props: {
+	children: ReactNode;
+	disabled: boolean;
+	onClick: () => any;
+}) => {
+	return (
+		<StyledButton disabled={props.disabled} onClick={props.onClick}>
+			{props.children}
+		</StyledButton>
+	);
 };
 
 export default Button;
