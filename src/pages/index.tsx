@@ -1,8 +1,12 @@
 import { useState } from "react";
-import axios from "axios";
 import { GetServerSideProps } from "next";
 
-import { addBookmark, isBookmarked, removeBookmark } from "../functions";
+import {
+	addBookmark,
+	fetchArticles,
+	isBookmarked,
+	removeBookmark
+} from "../functions";
 import { Article } from "../common/types";
 import Articles from "../components/Articles";
 import Bookmarks from "../components/Bookmarks";
@@ -28,12 +32,8 @@ const Home = (props: { articles: Article[] }) => {
 	);
 };
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
-	const res = await axios.get(
-		`https://newsapi.org/v2/top-headlines?q=Coronavirus&pageSize=6&apiKey=${process.env.API_KEY}`
-	);
-	const { articles } = res.data;
-	return { props: { articles } };
+export const getServerSideProps: GetServerSideProps = async () => {
+	return await fetchArticles();
 };
 
 export default Home;

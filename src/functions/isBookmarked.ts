@@ -7,7 +7,9 @@ const isBookmarked = (bookmarks: Article[]) => {
 				(bookmark: Article) => bookmark.url === article.url
 			);
 			return bookmarkExists;
-		} catch (e) {}
+		} catch (err) {
+			console.log(err);
+		}
 	};
 };
 

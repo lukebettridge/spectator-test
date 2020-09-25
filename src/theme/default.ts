@@ -15,6 +15,7 @@ export default {
 		logo: "#D2091E",
 		primary: {
 			black: "#262222",
+			green: "#29724C",
 			red: "#D30D1D",
 			white: "#FFFFFF"
 		}

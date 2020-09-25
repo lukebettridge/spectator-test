@@ -9,9 +9,12 @@ const addBookmark = (
 			const bookmarkExists = !!bookmarks.find(
 				(bookmark: Article) => bookmark.url === article.url
 			);
-			if (bookmarkExists) return;
+			if (bookmarkExists)
+				throw new Error("A bookmark already exists for this article.");
 			setBookmarks([article, ...bookmarks]);
-		} catch (e) {}
+		} catch (err) {
+			console.log(err);
+		}
 	};
 };
 

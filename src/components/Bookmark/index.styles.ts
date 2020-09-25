@@ -43,3 +43,11 @@ export const Container = styled.div`
 		}
 	}
 `;
+
+export const ContentWrapper = styled.div`
+	flex-basis: 30rem;
+
+	@media (min-width: ${(p) => p.theme.breakpoints.l}) {
+		flex-basis: unset;
+	}
+`;

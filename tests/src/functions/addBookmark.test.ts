@@ -5,10 +5,11 @@ describe("add bookmark function", () => {
 		jest.resetAllMocks();
 	});
 	const setBookmarkMock = jest.fn();
+	global.console.log = jest.fn();
 
 	it("returns a function", () => {
-		const response = addBookmark([], () => {});
-		expect(response).toEqual(expect.any(Function));
+		const res = addBookmark([], () => {});
+		expect(res).toEqual(expect.any(Function));
 	});
 
 	it("adds a bookmark successfully", () => {
@@ -26,6 +27,7 @@ describe("add bookmark function", () => {
 
 	it("does not add the same bookmark twice", () => {
 		addBookmark([testArticles.bar], setBookmarkMock)(testArticles.bar);
+		expect(global.console.log).toHaveBeenCalledWith(expect.any(Error));
 		expect(setBookmarkMock).not.toHaveBeenCalled();
 	});
 });

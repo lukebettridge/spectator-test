@@ -5,11 +5,16 @@ import { StyledButton } from "./index.styles";
 
 const Button = (props: {
 	children: ReactNode;
-	disabled: boolean;
+	circle?: boolean;
+	disabled?: boolean;
 	onClick: () => any;
 }) => {
 	return (
-		<StyledButton disabled={props.disabled} onClick={props.onClick}>
+		<StyledButton
+			circle={props.circle}
+			disabled={props.disabled}
+			onClick={props.onClick}
+		>
 			{props.children}
 		</StyledButton>
 	);
@@ -17,6 +22,7 @@ const Button = (props: {
 
 Button.propTypes = {
 	children: PropTypes.node,
+	circle: PropTypes.bool,
 	disabled: PropTypes.bool,
 	onClick: PropTypes.func
 };

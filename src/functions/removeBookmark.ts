@@ -10,7 +10,9 @@ const removeBookmark = (
 				(bookmark: Article) => bookmark.url !== article.url
 			);
 			setBookmarks(newBookmarks);
-		} catch (e) {}
+		} catch (err) {
+			console.log(err);
+		}
 	};
 };
 

@@ -1,14 +1,14 @@
 import removeBookmark from "@functions/removeBookmark";
 
-describe("add bookmark function", () => {
+describe("remove bookmark function", () => {
 	beforeEach(() => {
 		jest.resetAllMocks();
 	});
 	const setBookmarkMock = jest.fn();
 
 	it("returns a function", () => {
-		const response = removeBookmark([], () => {});
-		expect(response).toEqual(expect.any(Function));
+		const res = removeBookmark([], () => {});
+		expect(res).toEqual(expect.any(Function));
 	});
 
 	it("removes a bookmark successfully", () => {
