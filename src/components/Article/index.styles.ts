@@ -7,7 +7,7 @@ export const Author = styled(Subheading)`
 `;
 
 export const Container = styled.div`
-	@media (min-width: 48em) {
+	@media (min-width: ${(p) => p.theme.breakpoints.m}) {
 		margin-bottom: 4.25rem;
 	}
 `;
@@ -18,7 +18,7 @@ export const Image = styled.img`
 	object-fit: cover;
 	width: 100%;
 
-	@media (min-width: 48em) {
+	@media (min-width: ${(p) => p.theme.breakpoints.m}) {
 		margin-top: auto;
 	}
 `;
@@ -33,7 +33,7 @@ export const Wrapper = styled.div`
 		border: none;
 	}
 
-	@media (min-width: 60em) {
+	@media (min-width: ${(p) => p.theme.breakpoints.l}) {
 		border-bottom: 0.125rem solid ${(p) => p.theme.colors.border};
 
 		&:nth-last-child(1),

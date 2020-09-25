@@ -28,7 +28,7 @@ export const Container = styled.div`
 		width: 0.125rem;
 	}
 
-	@media (min-width: 60em) {
+	@media (min-width: ${(p) => p.theme.breakpoints.l}) {
 		border-bottom: 0.125rem solid ${(p) => p.theme.colors.border};
 		font-size: 7px;
 		padding: 2rem 0 1.75rem;

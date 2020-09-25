@@ -1,4 +1,8 @@
 export default {
+	breakpoints: {
+		m: "48em",
+		l: "60em"
+	},
 	colors: {
 		body: "rgba(38, 34, 34, 0.6)",
 		border: "#EBEBEB",

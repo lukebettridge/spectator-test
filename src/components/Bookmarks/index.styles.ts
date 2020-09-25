@@ -21,7 +21,7 @@ export const Container = styled.div`
 		top: 1.125rem;
 	}
 
-	@media (min-width: 60em) {
+	@media (min-width: ${(p) => p.theme.breakpoints.l}) {
 		margin-left: 0;
 		padding-top: 0;
 	}
@@ -35,7 +35,7 @@ export const FlexContainer = styled.div`
 	min-height: 18rem;
 	overflow-x: scroll;
 
-	@media (min-width: 60em) {
+	@media (min-width: ${(p) => p.theme.breakpoints.l}) {
 		flex-direction: column;
 		margin-left: 0;
 		min-height: unset;
@@ -59,7 +59,7 @@ export const HeadContainer = styled.div`
 		width: 0.125rem;
 	}
 
-	@media (min-width: 60em) {
+	@media (min-width: ${(p) => p.theme.breakpoints.l}) {
 		border-bottom: 0.125rem solid ${(p) => p.theme.colors.border};
 		padding: 3.25rem 0 2rem;
 		width: 100%;
@@ -81,7 +81,7 @@ export const Wrapper = styled.div`
 	margin-right: -2.5rem;
 	overflow: hidden;
 
-	@media (min-width: 60em) {
+	@media (min-width: ${(p) => p.theme.breakpoints.l}) {
 		border-bottom: none;
 		grid-row: unset;
 		margin-left: 0;
