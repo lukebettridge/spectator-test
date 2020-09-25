@@ -18,6 +18,27 @@ describe("remove bookmark function", () => {
 		)(testArticles.bar);
 		expect(setBookmarkMock).toHaveBeenCalledWith([testArticles.foo]);
 	});
+
+	[
+		{
+			scenario: "an empty",
+			bookmarks: []
+		},
+		{
+			scenario: "a null",
+			bookmarks: null
+		}
+	].map(({ scenario, bookmarks }) =>
+		it(`handles ${scenario} list of bookmarks`, () => {
+			removeBookmark(bookmarks, setBookmarkMock)(testArticles.bar);
+			expect(setBookmarkMock).toHaveBeenCalledWith([]);
+		})
+	);
+
+	it("handles an article that doesn't exist", () => {
+		removeBookmark([], setBookmarkMock)(null);
+		expect(setBookmarkMock).toHaveBeenCalledWith([]);
+	});
 });
 
 const testArticles = {

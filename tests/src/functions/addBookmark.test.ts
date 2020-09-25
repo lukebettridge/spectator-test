@@ -20,15 +20,31 @@ describe("add bookmark function", () => {
 		]);
 	});
 
-	it("adds a bookmark to an empty list successfully", () => {
-		addBookmark([], setBookmarkMock)(testArticles.bar);
-		expect(setBookmarkMock).toHaveBeenCalledWith([testArticles.bar]);
-	});
-
 	it("does not add the same bookmark twice", () => {
 		addBookmark([testArticles.bar], setBookmarkMock)(testArticles.bar);
 		expect(global.console.log).toHaveBeenCalledWith(expect.any(Error));
 		expect(setBookmarkMock).not.toHaveBeenCalled();
+	});
+
+	[
+		{
+			scenario: "an empty",
+			bookmarks: []
+		},
+		{
+			scenario: "a null",
+			bookmarks: null
+		}
+	].map(({ scenario, bookmarks }) =>
+		it(`adds a bookmark to ${scenario} list successfully`, () => {
+			addBookmark(bookmarks, setBookmarkMock)(testArticles.bar);
+			expect(setBookmarkMock).toHaveBeenCalledWith([testArticles.bar]);
+		})
+	);
+
+	it("handles an article that doesn't exist", () => {
+		addBookmark([], setBookmarkMock)(null);
+		expect(global.console.log).toHaveBeenCalledWith(expect.any(Error));
 	});
 });
 

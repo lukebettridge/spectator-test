@@ -5,6 +5,7 @@ const removeBookmark = (
 	setBookmarks: (value: Article[]) => any
 ) => {
 	return (article: Article) => {
+		bookmarks = bookmarks || [];
 		try {
 			const newBookmarks = bookmarks.filter(
 				(bookmark: Article) => bookmark.url !== article.url
