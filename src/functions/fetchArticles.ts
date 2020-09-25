@@ -4,7 +4,7 @@ const fetchArticles = async () => {
 	const pageSize = process.env.PAGE_SIZE || 6;
 	try {
 		const res = await axios.get(
-			`https://newsapi.org/v2/top-headlines?q=Coronavirus&pageSize=${pageSize}`,
+			`https://newsapi.org/v2/everything?domains=thetimes.co.uk&pageSize=${pageSize}`,
 			{
 				headers: {
 					Authorization: `Bearer ${process.env.API_KEY}`

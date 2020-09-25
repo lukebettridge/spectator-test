@@ -11,7 +11,7 @@ const Articles = ({ addBookmark, articles, isBookmarked }) => (
 				addBookmark={addBookmark}
 				article={article}
 				isBookmarked={isBookmarked(article)}
-				key={index}
+				key={`article-${index}`}
 			/>
 		))}
 	</Wrapper>

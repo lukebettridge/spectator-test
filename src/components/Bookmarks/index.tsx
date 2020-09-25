@@ -26,7 +26,7 @@ const Bookmarks = ({ bookmarks, removeBookmark }) => (
 				{bookmarks.map((article, index) => (
 					<Bookmark
 						article={article}
-						key={index}
+						key={`bookmark-${index}`}
 						removeBookmark={removeBookmark}
 					/>
 				))}

@@ -8,7 +8,7 @@ import { Author, Container, Image, Wrapper } from "./index.styles";
 const Article = ({ addBookmark, article, isBookmarked }) => {
 	const { author, title, urlToImage } = article;
 	return (
-		<Wrapper>
+		<Wrapper role="article">
 			<Container>
 				<Author>{author}</Author>
 				<Heading>{title}</Heading>
@@ -30,7 +30,7 @@ const Article = ({ addBookmark, article, isBookmarked }) => {
 					)}
 				</Button>
 			</Container>
-			<Image src={urlToImage} />
+			<Image alt={title} src={urlToImage} />
 		</Wrapper>
 	);
 };

@@ -3,7 +3,7 @@ import Document, { Head, Main, NextScript } from "next/document";
 class MyDocument extends Document {
 	render() {
 		return (
-			<html>
+			<html lang="en">
 				<Head>
 					<link href="https://use.typekit.net/xkz5olp.css" rel="stylesheet" />
 					{this.props.styles}
