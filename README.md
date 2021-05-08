@@ -1,6 +1,8 @@
-# Spectator Test
+# The Spectator Technical Test
 
 A web application for bookmarking articles. Using React, NextJS, TypeScript, Styled Components, and Jest.
+
+(This is a technical test I undertook during the hiring process as a Front-End Developer at _The Spectator_, the test's instructions can be found [here](https://github.com/lukebettridge/the-spectator-tech-test/raw/master/coding-assignment.pdf).)
 
 ## Getting Started
 
